@@ -1,14 +1,31 @@
 [project]
 name = "url-shortener"
 version = "0.1.0"
-description = "URL shortener with analytics"
+description = "A URL shortener with analytics."
 requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = ["pytest>=8.0"]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
 addopts = "-v"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+# E/W: pycodestyle, F: pyflakes, I: isort, UP: pyupgrade,
+# B: flake8-bugbear, SIM: flake8-simplify
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
