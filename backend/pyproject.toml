@@ -3,7 +3,9 @@ name = "url-shortener"
 version = "0.1.0"
 description = "A URL shortener with analytics."
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "sqlalchemy>=2.0",
+]
 
 [dependency-groups]
 dev = [
@@ -22,8 +24,6 @@ line-length = 88
 target-version = "py312"
 
 [tool.ruff.lint]
-# E/W: pycodestyle, F: pyflakes, I: isort, UP: pyupgrade,
-# B: flake8-bugbear, SIM: flake8-simplify
 select = ["E", "W", "F", "I", "UP", "B", "SIM"]
 
 [tool.mypy]

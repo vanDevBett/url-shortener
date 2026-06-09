@@ -1,0 +1,5 @@
+sqlalchemy==2.0.50
+pytest==9.0.3
+pre-commit==4.6.0
+ruff==0.15.16
+mypy==2.1.0
