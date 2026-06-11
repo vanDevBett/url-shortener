@@ -14,3 +14,7 @@ class LinkService:
             link_id=next_id, original_url=original_url, short_code=short_code
         )
         return new_link
+
+    async def get_link(self, short_code: str) -> Link | None:
+        link = await self.link_repo.get_by_short_code(short_code=short_code)
+        return link
