@@ -42,3 +42,4 @@ uv run pre-commit run --all-files # run all checks manually
 ## Architecture decisions
 
 - [ADR-001: Short code generation strategy](docs/adr/0001-short-code-generation.md)
+- [ADR-002: Code assignment strategy](docs/adr/0002-code-assignment.md)
