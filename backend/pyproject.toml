@@ -39,6 +39,7 @@ select = ["E", "W", "F", "I", "UP", "B", "SIM"]
 [tool.mypy]
 python_version = "3.12"
 strict = true
+exclude = ["^alembic/"]
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
